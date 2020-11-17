@@ -1,0 +1,120 @@
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - thankyou
+  - bot_challenge
+  - recommend_person_with_given_info
+  - recommend_time_to_meet
+  - new_message
+  - message_person
+  - message_person_this_message
+  - persons
+  - messages
+  - topics
+  - add_skill
+  - add_skill_this_skill
+  - login
+  - signup
+  - new_messages
+  - time
+entities:
+  - topic
+  - person
+  - message
+  - user_id
+  - first_name
+  - last_name
+  - email
+  - password
+
+slots:
+  topic:
+    type: text
+    auto_fill: True
+  person:
+    type: text
+    auto_fill: True
+  message:
+    type: text
+    auto_fill: True
+  user_id:
+    type: text
+    auto_fill: True
+  first_name:
+    type: unfeaturized
+    auto_fill: false
+  last_name:
+    type: unfeaturized
+    auto_fill: false
+  email:
+    type: unfeaturized
+    auto_fill: false
+  password:
+    type: unfeaturized
+    auto_fill: false
+
+forms:
+  - signup_form
+  - signin_form
+
+actions:
+  - action_reset_all_slots
+  - action_send_message
+  - action_recommend_person
+  - action_add_skill
+  - action_show_messages
+
+responses:
+  utter_ask_first_name:
+    - text: "Enter first name"
+
+  utter_ask_last_name:
+    - text: "Enter last name"
+
+  utter_ask_email:
+    - text: "Enter email"
+
+  utter_ask_password:
+    - text: "Enter password"
+
+  utter_greet:
+  - text: "Hey their!"
+  - text: "Hello"
+  - text: "hi"
+
+  utter_goodbye:
+  - text: "Bye"
+  - text: "sayonara"
+  - text: "bbye"
+
+  utter_iamabot:
+  - text: "I am Bot"
+  - text: "I am Donna, and I am awesome"
+  - text: "I am a chat bot, running on your college server. You can ask me to get some things done"
+
+  utter_what_message:
+  - text: "What message should i send"
+  - text: "What message would you like me to send ?"
+
+  utter_welcome:
+  - text: "Your welcome"
+  - text: "You can always count on me"
+
+  utter_whom_to_send:
+  - text: "Whom should i send this message ?"
+  - text: "Whom is this message for ?"
+
+  utter_what_skill:
+    - text: "What skills should i add ?"
+
+  utter_time:
+    - text: "He is mostly free around 5pm on weekdays"
+
+  utter_default:
+    - text: "Looks like i cant understand what you mean to say. Maybe rephrase your query"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
